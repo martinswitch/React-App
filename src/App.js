@@ -1,12 +1,11 @@
-import logo from './logo.svg';
-import React, { Component } from 'react';
-import './App.css';
-import { createContext } from 'react';
-import Home from "./Component/Home"
-import About from "./Component/About"
-import Contact from "./Component/Contact"
-import {Route,Switch,Router} from "react-router-dom"
-
+import logo from "./logo.svg";
+import React, { Component } from "react";
+import "./App.css";
+import { createContext } from "react";
+import Home from "./Component/Home";
+import About from "./Component/About";
+import Contact from "./Component/Contact";
+import { Route, Switch, BrowserRouter } from "react-router-dom";
 
 // we have two types of components
 // 1 sfc=> statel ess funcional component
@@ -18,13 +17,14 @@ class App extends Component {
   render() {
     return (
       <React.Fragment>
-        <Router>
+        <BrowserRouter>
           <Switch>
-            <Route path="/home" component={Home} />
+            <Route path="/martinswitch/React-App" component={Home} />
             <Route path="/about" component={About} />
             <Route path="/contact" component={Contact} />
+            <Route path="/" component={Home} />
           </Switch>
-        </Router>
+        </BrowserRouter>
       </React.Fragment>
     );
   }
