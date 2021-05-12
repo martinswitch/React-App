@@ -5,6 +5,7 @@ import { createContext } from 'react';
 import Home from "./Component/Home"
 import About from "./Component/About"
 import Contact from "./Component/Contact"
+import {Route,Switch,Router} from "react-router-dom"
 
 
 // we have two types of components
@@ -12,23 +13,21 @@ import Contact from "./Component/Contact"
 // 2 class based component
 
 class App extends Component {
-  state = { 
-    firstName:'Martin',
-    phone:'22323'
-   }
-  render() { 
-    return (  <div>
-      {/* <Home /> */}
+  state = {};
 
-      <About />
-
-      <Contact />
-
-
-
-
-    </div>);
+  render() {
+    return (
+      <React.Fragment>
+        <Router>
+          <Switch>
+            <Route path="/home" component={Home} />
+            <Route path="/about" component={About} />
+            <Route path="/contact" component={Contact} />
+          </Switch>
+        </Router>
+      </React.Fragment>
+    );
   }
 }
- 
-export default App; 
+
+export default App;

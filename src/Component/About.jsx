@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import Button from "./Button"
+import Input from "./Input"
 class About extends Component {
     state = {  }
     render() { 
@@ -8,6 +10,12 @@ class About extends Component {
             About Page
              
             </h1>
+
+            <input/>
+            
+            <button/>
+
+
         </div> );
     }
 }

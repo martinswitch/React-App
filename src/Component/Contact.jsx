@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import Button from "./Button"
+import Input from "./Input"
 class Contact extends Component {
     state = {  }
     render() { 
@@ -9,6 +11,11 @@ class Contact extends Component {
             Contact Us
 
             </h1>
+
+            <input/>
+            
+            <button/>
+
 
         </div> );
     }
